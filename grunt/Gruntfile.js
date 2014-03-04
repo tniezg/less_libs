@@ -1,12 +1,14 @@
 module.exports = function(grunt) {
 	var sourcePath = '../app',
-		destinationCssPath = sourcePath + '/css/layout.css';
+		buildPath = '../build',
+		cssPath = sourcePath,
+		destinationCssPath = buildPath + '/mixins.css';
 
 	grunt.initConfig({
 		less: {
 			development: {
 				src: [
-					cssPath + '/layout.less'
+					cssPath + '/mixins.less'
 				],
 				dest: destinationCssPath,
 				options: {
@@ -25,8 +27,7 @@ module.exports = function(grunt) {
 		watch: {
 			development: {
 				files: [
-					sourcePath + '/**',
-					'!**/*.css'
+					sourcePath + '/**'
 				],
 				tasks: [
 					'less:development'
