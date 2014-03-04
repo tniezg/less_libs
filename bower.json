@@ -1,0 +1,14 @@
+{
+	"name": "LessMixins",
+	"version": "0.0.1"
+	"ignore": [
+		"app",
+		"bower.json",
+		"grunt"
+	],
+	"main": "build/mixins.css",
+	"dependencies": {
+		"less-elements": "191754c0ec5fc054bba9117e76f3ee129c1d4bd7",
+		"normalize-css": "2.1.0"
+	}
+}
