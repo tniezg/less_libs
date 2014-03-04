@@ -1,0 +1,69 @@
+.plain-horizontal-list(){
+    margin: 0px;padding: 0px; text-decoration: none; display: inline-block;
+    >li{
+        display: inline-block;
+    }
+}
+
+.background-cover{
+    background-size: cover; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;
+}
+
+.text-shadow(@string: 0 1px 3px rgba(0, 0, 0, 0.25)) {
+    text-shadow: @string;
+}
+
+.centralized-window(@width, @height){
+    position: absolute; top: 50%; left: 50%; margin-top: -@height/2; margin-left: -@width/2; width: @width; height: @height;
+}
+
+.border-radius-top-right(@topright: 0){
+  -webkit-border-top-right-radius: @topright;
+  -moz-border-radius-topright: @topright;
+  border-top-right-radius: @topright;
+  .background-clip(padding-box);
+}
+
+.border-radius-bottom-right(@bottomright: 0){
+  -webkit-border-bottom-right-radius: @bottomright;
+  -moz-border-radius-bottomright: @bottomright;
+  border-bottom-right-radius: @bottomright;
+  .background-clip(padding-box);
+}
+
+.border-radius-bottom-left(@bottomleft: 0){
+  -webkit-border-bottom-left-radius: @bottomleft;
+  -moz-border-radius-bottomleft: @bottomleft;
+  border-bottom-left-radius: @bottomleft;
+  .background-clip(padding-box);
+}
+
+.border-radius-top-right(@topleft: 0){
+  -webkit-border-top-left-radius: @topleft;
+  -moz-border-radius-topleft: @topleft;
+  border-top-left-radius: @topleft;
+  .background-clip(padding-box);
+}
+
+.hierarchical-table{
+  display: table; width: 100%; height: 100%;
+  &>div{
+    display: table-row; height: 0;
+    &>div{
+      display: table-cell; vertical-align: top;
+    }
+    &:last-child{
+      height: auto;
+    }
+  }
+}
+
+.modern-centered(@top: 50%, @left: 50%, @offsetTop: -50%, @offsetLeft: -50%){
+  margin: auto; position: absolute; top: @top; left: @left; -webkit-transform: translate(@offsetLeft, @offsetTop); -ms-transform: translate(@offsetLeft, @offsetTop); transform: translate(@offsetLeft, @offsetTop);
+}
+
+.after-clear-fix{
+  &:after{
+    content: ""; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;
+  }
+}

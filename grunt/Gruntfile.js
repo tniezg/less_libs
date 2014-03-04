@@ -17,8 +17,8 @@ module.exports = function(grunt) {
 			}
 		},
 		bump: {
-			development: {
-				files: ["bower.json"],
+			options: {
+				files: ["../bower.json"],
 				commitFiles: ["-a"],
 				push: false,
 				commit: false
@@ -43,10 +43,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-bump');
-
-	grunt.registerTask('bump', [
-		'bump:development'
-	]);
 
 	grunt.registerTask('dev', [
 		'watch:development'
