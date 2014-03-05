@@ -5,8 +5,6 @@
 	"main": "Gruntfile.js",
 	"dependencies": {
 		"grunt": "~0.4.1",
-		"grunt-contrib-watch": "0.4.4",
-		"grunt-contrib-less": "0.6.1",
 		"grunt-bump": "0.0.13"
 	}
 }

@@ -1,0 +1,63 @@
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+.background-cover {
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.hierarchical-table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.hierarchical-table > div {
+  display: table-row;
+  height: 0;
+}
+.hierarchical-table > div > div {
+  display: table-cell;
+  vertical-align: top;
+}
+.hierarchical-table > div:last-child {
+  height: auto;
+}
+.after-clear-fix:after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.container {
+  background: grey;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  display: inline-block;
+}
+.container .container-window-modern {
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: green;
+}
+.container .container-window-supported {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}

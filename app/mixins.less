@@ -13,10 +13,6 @@
     text-shadow: @string;
 }
 
-.centralized-window(@width, @height){
-    position: absolute; top: 50%; left: 50%; margin-top: -@height/2; margin-left: -@width/2; width: @width; height: @height;
-}
-
 .border-radius-top-right(@topright: 0){
   -webkit-border-top-right-radius: @topright;
   -moz-border-radius-topright: @topright;
@@ -60,6 +56,10 @@
 
 .modern-centered(@top: 50%, @left: 50%, @offsetTop: -50%, @offsetLeft: -50%){
   margin: auto; position: absolute; top: @top; left: @left; -webkit-transform: translate(@offsetLeft, @offsetTop); -ms-transform: translate(@offsetLeft, @offsetTop); transform: translate(@offsetLeft, @offsetTop);
+}
+
+.centralized-window(@width, @height){
+    position: absolute; top: 50%; left: 50%; margin-top: -@height/2; margin-left: -@width/2; width: @width; height: @height;
 }
 
 .after-clear-fix{

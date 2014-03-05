@@ -1,0 +1,15 @@
+@bowerPath: "../../../bower_components";
+@appPath: "../../../app";
+
+@import "@{bowerPath}/less-elements/elements";
+@import "@{appPath}/mixins";
+
+.container{
+    background: grey; width: 300px; height: 300px; position: relative; display: inline-block;
+    .container-window-modern{
+        .modern-centered; background-color: green;
+    }
+    .container-window-supported{
+        .centralized-window(100px, 100px); background-color: green;
+    }
+}
