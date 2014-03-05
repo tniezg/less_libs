@@ -4,7 +4,8 @@
 	"ignore": [
 		"bower.json",
 		"grunt",
-		"examples"
+		"examples",
+		".gitignore"
 	],
 	"main": "app/mixins.less",
 	"dependencies": {
