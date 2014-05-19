@@ -58,8 +58,8 @@
   margin: auto; position: absolute; top: @top; left: @left; -webkit-transform: translate(@offsetLeft, @offsetTop); -ms-transform: translate(@offsetLeft, @offsetTop); transform: translate(@offsetLeft, @offsetTop);
 }
 
-.centralized-window(@width, @height){
-    position: absolute; top: 50%; left: 50%; margin-top: -@height/2; margin-left: -@width/2; width: @width; height: @height;
+.centralized-window(@width, @height, @top: 50%, @left: 50%, @offsetTop: -0.5, @offsetLeft: -0.5){
+    position: absolute; top: @top; left: @left; margin-top: @height * @offsetTop; margin-left: @width * @offsetLeft; width: @width; height: @height;
 }
 
 .after-clear-fix{
